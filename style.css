@@ -19220,8 +19220,9 @@ a:focus {
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #ff7236;
 }
-/*Libri in evidenza*/
-.evidenza{
+
+/*Suddivisione per Classi*/
+.struttura{
     width: 100vw;
     height:100vh;
     display: flex;
@@ -19229,7 +19230,32 @@ a:focus {
     justify-content: center;
     overflow: hidden;
 }
-.card{
+.struttura-quadrato{
+    width: 100vw;
+    height:100vh;
+    display: table-row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.quadrato {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 50px 50px 80px;
+    grid-template-areas: "image" "text" "stats";
+    
+    font-family: roboto;
+    border-radius: 18px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.card {
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 210px 210px 80px;
@@ -19241,32 +19267,34 @@ a:focus {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     text-align: center;
     
+	transition: 0.5s ease;
+	cursor: pointer;
 }
-.car-image{
+.card-image {
     grid-area: image;
-    background: url("images/img1.jpg");
+    background: url("foto.jpg");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
 }
-.card-text{
+.card-text {
     grid-area: text;
     margin: 25px;
 }
-.card-text .date{
+.card-text .date {
     color: rgb(255,7,110);
     font-size: 13px;
 }
-.card-text p{
+.card-text p {
     color: grey;
     font-size: 15px;
     font-weight: 300;
 }
-card_text h2 {
+.card-text h2 {
     margin-top: 0px;
     font-size: 28px;
 }
-.card-stats{
+.card-stats {
     grid-area: stats;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -19274,4 +19302,36 @@ card_text h2 {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background: rgb(255,7,110)
+}
+.card-stats .stat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	color: white;
+}
+.card-stats .type {
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.card-stats .value {
+	font-size: 22px;
+	font-weight: 500;
+}
+.card-stats .border {
+	border-left: 1px solid rgb(172,26,87);
+	border-right: 1px solid rgb(172,26,87);
+}
+.card-stats .value sup {
+	font-size: 12px;
+}
+.card:hover {
+	transform: scale(1.2);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.quadrato:hover {
+	transform: scale(1.2);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
