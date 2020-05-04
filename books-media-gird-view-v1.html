@@ -58,15 +58,16 @@
                             </div>
                             <div class="col-md-9">
                                 <!-- Header Topbar -->
-                                <div class="header-topbar hidden-sm hidden-xs">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="topbar-info">
-                                                <a href="tel:+61-3-8376-6284"><i class="fa fa-phone"></i>+61-3-8376-6284</a>
-                                                <span>/</span>
-                                                <a href="mailto:support@libraria.com"><i class="fa fa-envelope"></i>support@libraria.com</a>
+                            
+                                    <div class="header-topbar hidden-sm hidden-xs">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="topbar-info">
+                                                    <a href="tel:+61-3-8376-6284"><i class="fa fa-phone"></i>+61-3-8376-6284</a>
+                                                    <span>/</span>
+                                                    <a href="mailto:support@libraria.com"><i class="fa fa-envelope"></i>support@libraria.com</a>
+                                                </div>
                                             </div>
-                                        </div>
                                         <div class="col-sm-6">
                                             <div class="topbar-links">
                                                 <a href="signin.html"><i class="fa fa-lock"></i>Login / Register</a>
@@ -266,41 +267,6 @@
                                         <div class="filter-box">
                                             <h3>What are you looking for at the library?</h3>
                                             <form action="http://libraria.demo.presstigers.com/index.html" method="get">
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="keywords">Search by Keyword</label>
-                                                        <input class="form-control" placeholder="Search by Keyword" id="keywords" name="keywords" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 col-sm-6">
-                                                    <div class="form-group">
-                                                        <select name="catalog" id="catalog" class="form-control">
-                                                            <option>Search the Catalog</option>
-                                                            <option>Catalog 01</option>
-                                                            <option>Catalog 02</option>
-                                                            <option>Catalog 03</option>
-                                                            <option>Catalog 04</option>
-                                                            <option>Catalog 05</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 col-sm-6">
-                                                    <div class="form-group">
-                                                        <select name="category" id="category" class="form-control">
-                                                            <option>All Categories</option>
-                                                            <option>Category 01</option>
-                                                            <option>Category 02</option>
-                                                            <option>Category 03</option>
-                                                            <option>Category 04</option>
-                                                            <option>Category 05</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <input class="form-control" type="submit" value="Search">
-                                                    </div>
-                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -309,17 +275,26 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-md-push-3">
-                                    <div class="filter-options margin-list">
-                                        <div class="row">                                            
-                                            <div class="col-md-4 col-sm-4">
-                                                <select name="orderby">
-                                                    <option selected="selected">Default sorting</option>
-                                                    <option>Sort by popularity</option>
-                                                    <option>Sort by rating</option>
-                                                    <option>Sort by newness</option>
-                                                    <option>Sort by price</option>
-                                                </select>
-                                            </div>
+                                     <div class="filter-buttons">
+                                    <div class="filter btn active" data-filter="all">All Releases</div>
+                                    <div class="filter btn" data-filter=".adults">Adults</div>
+                                    <div class="filter btn" data-filter=".kids-teens">Kids &amp; Teens</div>
+                                    <div class="filter btn" data-filter=".video">Video</div>
+                                    <div class="filter btn" data-filter=".audio">Audio</div>
+                                    <div class="filter btn" data-filter=".books">Books</div>
+                                    <div class="filter btn" data-filter=".magazines">Magazines</div>
+                                        </div>    
+                                        <div class="filter-options margin-list">
+                                            <div class="row">                                            
+                                                <div class="col-md-4 col-sm-4">
+                                                    <select name="orderby">
+                                                        <option selected="selected">Default sorting</option>
+                                                        <option>Sort by popularity</option>
+                                                        <option>Sort by rating</option>
+                                                        <option>Sort by newness</option>
+                                                        <option>Sort by price</option>
+                                                    </select>
+                                                </div>
                                             <div class="col-md-4 col-sm-4">
                                                 <div class="filter-result">Showing items 1 to 9 of 19 total</div>
                                             </div>
