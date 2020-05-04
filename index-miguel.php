@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+    require_once "config.php";
+?>
 <html lang="zxx">
     
 
@@ -244,7 +247,17 @@
                         <div class="carousel-caption">
                             <h3>Online Learning Anytime, Anywhere!</h3>
                             <h2>Ciao, Miguel</h2>
-                            <h2>Ciao, <?php echo("Miguel (PHP)");?></h2>
+                            <!--<h2>Ciao, <?php echo("Miguel (PHP)");?></h2>-->
+                            <?php
+                            $stmt = $pdo->query('SELECT * FROM tabella_vuota');
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
+                                <h2>Ciao, <?php echo($row["titolo"]);?></h2>
+                                <?php
+                                echo $row['name'] . "\n";
+                            }    
+                            ?>
                             <p>Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita.</p>
                             <div class="slide-buttons hidden-sm hidden-xs">    
                                 <a href="#" class="btn btn-primary">Read More</a>
