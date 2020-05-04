@@ -253,7 +253,7 @@
                             while ($row = $stmt->fetch())
                             {
                                 ?>
-                                <h2>Ciao, <?php echo($row["titolo"]);?></h2>
+                                <h2>Ciao, <?php echo($row["Titolo"]);?></h2>
                                 <?php
                                 echo $row['name'] . "\n";
                             }    
