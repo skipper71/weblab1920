@@ -367,8 +367,8 @@
                                                 <header class="entry-header">
                                                     <h2 class="entry-title"><?php echo($row["Titolo"]);?></h2>
                                                     <ul>
-                                                        <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                        <li><strong>ISBN:</strong> 9781581573268</li>
+                                                        <li><strong>Author:</strong><?php echo($row["Autore"]);?></li>
+                                                        <li><strong>ISBN:</strong><?php echo($row["ISBN"]);?></li>
                                                         <li>
                                                             <div class="rating">
                                                                 <strong>Rating:</strong> 
@@ -379,8 +379,8 @@
                                                                 <span>☆</span>
                                                             </div>
                                                         </li>
-                                                        <li><strong>Edition:</strong> First edition</li>
-                                                        <li><strong>Publisher:</strong> New York : Shaye Areheart Books, c2008</li>
+                                                        <li><strong>Edition:</strong><?php echo($row["Data pubblicazione"]);?></li>
+                                                        <li><strong>Publisher:</strong><?php echo($row["Editore"]);?></li>
                                                     </ul>
                                                 </header>
                                                 <div class="entry-content post-buttons">
