@@ -86,20 +86,14 @@
                                                                 <div class="item-info">
                                                                     <div class="name">
                                                                         <a href="#">
-                                                                        <?php echo("Miguel (PHP)");?></h2>-->
-                                                                             <?php
-                                                                             $stmt = $pdo->query('SELECT * FROM tabella_Mario');
-                                                                                $pdowhile ($row = $stmt->fetch())
-                                                                                 ?>
-                                                                                {
-                               
-                                                                                 <?php echo($row["titolo"]);?>
-                                                                                 <?php echo $row['name'] . "\n";
-                                                                                 }    
-                                                                                 ?>
+                                                                            <?php
+                                                                             $stmt = $pdo->query("SELECT * FROM tabella_Mario WHERE ID=".$id."" );
+                                                                              while ($row = $stmt->fetch())
+                                                                                ?>
+                                           
                                                                         </a>
                                                                     </div>
-                                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
+                                                                    <div class="author"><strong>Author:</strong><?php echo $row['autore'];?> </div>
                                                                     <div class="price">1 X $10.00</div>
                                                                 </div>
                                                                 <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
@@ -108,7 +102,7 @@
                                                                 <img src="images/header-cart-image-02.jpg" alt="cart item" />
                                                                 <div class="item-info">
                                                                     <div class="name">
-                                                                        <a href="#">The Great Gatsby</a>
+                                                                        <a href="#"><?php echo $row['Titolo'] . "\n";?></a>
                                                                     </div>
                                                                     <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
                                                                     <div class="price">1 X $10.00</div>
