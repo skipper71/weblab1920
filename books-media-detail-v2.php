@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php 
     require_once "config.php";
+    
+    $id = $_GET['id'];
+        
 ?>
 <html lang="zxx">
     
@@ -85,15 +88,10 @@
                                                                 <img src="images/header-cart-image-01.jpg" alt="cart item" />
                                                                 <div class="item-info">
                                                                     <div class="name">
-                                                                        <a href="#">
-                                                                            <?php
-                                                                             $stmt = $pdo->query("SELECT * FROM tabella_Mario WHERE ID=".$id."" );
-                                                                              while ($row = $stmt->fetch())
-                                                                                ?>
-                                           
+                                                                        <a href="#">                                           
                                                                         </a>
                                                                     </div>
-                                                                    <div class="author"><strong>Author:</strong><?php echo $row['autore'];?> </div>
+                                                                    <div class="author"><strong>Author:</strong><?php echo $row['Autore'];?> </div>
                                                                     <div class="price">1 X $10.00</div>
                                                                 </div>
                                                                 <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
@@ -316,6 +314,18 @@
                                 </section>
                                 <!-- End: Search Section -->
                             </div>
+                            <?php
+                                $query = "";
+                                if (isset($id)){
+                                    $query = "SELECT * FROM libri_mario WHERE ID=".$id."";
+                                } else {
+                                    // $query = "SELECT * FROM libri_mario ORDER BY rand() LIMIT 1";
+                                    $query = "SELECT * FROM libri_mario LIMIT 1";
+                                }
+                                $stmt = $pdo->query($query);
+
+                                while ($row = $stmt->fetch()) {
+                            ?>                    
                             <div class="booksmedia-detail-box">
                                 <div class="detailed-box">
                                     <div class="col-xs-12 col-sm-5 col-md-3">
@@ -326,13 +336,13 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-7 col-md-6">
                                         <div class="post-center-content">
-                                            <h2>The Great Gatsby</h2>
-                                            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong> 9781581573268, 9780062419385</p>
+                                            <h2><?php echo $row['Titolo'];?></h2>
+                                            <p><strong>Author:</strong> <?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong> <?php echo $row['ISBN'];?></p>
                                             <p><strong>Rating:</strong> </p>
                                             <p><strong>Edition:</strong> First edition</p>
-                                            <p><strong>Publisher:</strong> New York : Shaye Areheart Books, c2008</p>
-                                            <p><strong>Length:</strong> 518 pages.</p>
+                                            <p><strong>Publisher:</strong> <?php echo $row['Editore'];?></p>
+                                            <p><strong>Length:</strong> <?php echo $row['Numero di pagine'];?> pages.</p>
                                             <p><strong>Format:</strong> DVD</p>
                                             <p><strong>Language Note:</strong> Icelandic dialogue; English subtitles.</p>
                                             <p><strong>Genre :</strong> Feature films, Fiction films, Drama</p>
@@ -530,6 +540,9 @@ Email  : manirujjamanakash@gmail.com
                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                                         </div>
                                     </div>
+                                    <?php
+                                        }
+                                    ?>                                
                                 </div>
                             </div>
                         </div>

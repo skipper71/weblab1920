@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php 
     require_once "config.php";
+    
+    $id = $_GET['id'];
+    
 ?>
 <html lang="zxx">
     
@@ -360,15 +363,26 @@
                                                     </ul>
                                                 </div>
                                                 <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola');
+                            //$stmt = $pdo->query("SELECT * FROM libri_fabiola WHERE ISBN='".$isbn."'");
+                            $query = "";
+                            if (isset($id)){
+                                $query = "SELECT * FROM libri_fabiola WHERE id=".$id."";
+                            } else {
+                                // $query = "SELECT * FROM libri_fabiola ORDER BY rand() LIMIT 1";
+                                $query = "SELECT * FROM libri_fabiola ORDER BY num_lettori DESC LIMIT 1";
+                            }
+                            $stmt = $pdo->query($query);
+                            
+                            // SELECT * FROM libri_fabiola WHERE ISBN='88-04-53776-0'
+                                    
                             while ($row = $stmt->fetch())
                             {
                                 ?>
                                                 <header class="entry-header">
-                                                    <h2 class="entry-title"><?php echo($row["Titolo"]);?></h2>
+                                                    <h2 class="entry-title"><?php echo($row["titolo"]);?></h2>
                                                     <ul>
-                                                        <li><strong>Author:</strong><?php echo($row["Autore"]);?></li>
-                                                        <li><strong>ISBN:</strong><?php echo($row["ISBN"]);?></li>
+                                                        <li><strong>Author:</strong><?php echo($row["autore"]);?></li>
+                                                        <li><strong>ISBN:</strong><?php echo($row["isbn"]);?></li>
                                                         <li>
                                                             <div class="rating">
                                                                 <strong>Rating:</strong> 
@@ -379,10 +393,13 @@
                                                                 <span>☆</span>
                                                             </div>
                                                         </li>
-                                                        <li><strong>Edition:</strong><?php echo($row["Data pubblicazione"]);?></li>
-                                                        <li><strong>Publisher:</strong><?php echo($row["Editore"]);?></li>
+                                                        <li><strong>Edition:</strong><?php echo($row["data_pubblicazione"]);?></li>
+                                                        <li><strong>Publisher:</strong><?php echo($row["editore"]);?></li>
                                                     </ul>
                                                 </header>
+                                                <?php
+                            }
+                                ?>
                                                 <div class="entry-content post-buttons">
                                                     <a href="#." class="btn btn-dark-gray">Place a Hold</a>
                                                     <a href=""#." class="style:display:none"btn btn-dark-gray"></a>
