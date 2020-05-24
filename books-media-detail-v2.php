@@ -551,21 +551,31 @@ Email  : manirujjamanakash@gmail.com
             </div>
         </div>
         <!-- End: Products Section -->
+          <?php
+                                
+                                    // $query = "SELECT * FROM libri_mario ORDER BY id() LIMIT 1";
+                                    $query = "SELECT * FROM libri_mario ORDER BY id LIMIT 1";
+                               
+                                $stmt = $pdo->query($query);
+
+                                while ($row = $stmt->fetch()) {
+                            ?> 
         <div class="booksmedia-fullwidth">
             <div class="container">
                 <h2 class="section-title text-center">Popular Items</h2>
                     <span class="underline center"></span>
                     <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <ul class="popular-items-detail-v2">
+                         
                             <li>
                                 <div class="book-list-icon blue-icon"></div>
                                 <figure>
                                     <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=1>
+                                            <p><strong>Author:</strong>  <?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong>  <?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -604,15 +614,16 @@ Email  : manirujjamanakash@gmail.com
                                     </figcaption>
                                 </figure>                                                
                             </li>
+                           
                             <li>
                                 <div class="book-list-icon yellow-icon"></div>
                                 <figure>
                                     <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row["Titolo"];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=2>
+                                            <p><strong>Author:</strong> <?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong>  <?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -657,9 +668,9 @@ Email  : manirujjamanakash@gmail.com
                                     <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=3>
+                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -704,9 +715,9 @@ Email  : manirujjamanakash@gmail.com
                                     <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=4>
+                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -751,9 +762,9 @@ Email  : manirujjamanakash@gmail.com
                                     <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=5>
+                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -798,9 +809,9 @@ Email  : manirujjamanakash@gmail.com
                                     <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#.">The Great Gatsby</a></h4>
-                                            <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                            <p><strong>ISBN:</strong>  9781581573268</p>
+                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=6>
+                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
+                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
                                         </header>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                         <div class="actions">
@@ -842,7 +853,7 @@ Email  : manirujjamanakash@gmail.com
                         </ul>
             </div>
         </div>
-
+       <?php?>
         <!-- Start: Social Network -->
         <section class="social-network section-padding">
             <div class="container">
