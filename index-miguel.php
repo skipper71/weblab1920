@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+    require_once "config.php";
+?>
 <html lang="zxx">
     
 
@@ -9,7 +12,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
         
         <!-- Title -->
-        <title>..:: LIBRARIA DSG 3 ::..</title>
+        <title>..:: LIBRARIA DSG 3Patch ::..</title>
         
         <!-- Favicon -->
         <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
@@ -243,8 +246,19 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h3>Online Learning Anytime, Anywhere!</h3>
-                            <h2>Ciao a nessuno!</h2>
-                            <p>Buongiorno sto provando a modificaere il mio file utilizzando NetBeans.</p>
+                            <h2>Ciao, Miguel</h2>
+                            <!--<h2>Ciao, <?php echo("Miguel (PHP)");?></h2>-->
+                            <?php
+                            $stmt = $pdo->query('SELECT * FROM tabella_vuota');
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
+                                <h2>Ciao, <?php echo($row["Titolo"]);?></h2>
+                                <?php
+                                echo $row['name'] . "\n";
+                            }    
+                            ?>
+                            <p>Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita.</p>
                             <div class="slide-buttons hidden-sm hidden-xs">    
                                 <a href="#" class="btn btn-primary">Read More</a>
                                 <a href="#" class="btn btn-default">Purchase</a>
@@ -259,8 +273,8 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h3>Online Learning Anytime, Anywhere!</h3>
-                            <h2>Ciao, Mario!</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words.</p>
+                            <h2>Ciao, Miguel!</h2>
+                            <p>Ahi quanto a dir qual era è cosa dura esta selva selvaggia e aspra e forte che nel pensier rinova la paura!</p>
                             <div class="slide-buttons hidden-sm hidden-xs">    
                                 <a href="#" class="btn btn-primary">Read More</a>
                                 <a href="#" class="btn btn-default">Purchase</a>
@@ -275,8 +289,8 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h3>Online Learning Anytime, Anywhere!</h3>
-                            <h2>Ciao, Mario!</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words.</p>
+                            <h2>Ciao, Miguel!</h2>
+                            <p>Tant' è amara che poco è più morte; ma per trattar del ben ch'i' vi trovai, dirò de l'altre cose ch'i' v'ho scorte.</p>
                             <div class="slide-buttons hidden-sm hidden-xs">    
                                 <a href="#" class="btn btn-primary">Read More</a>
                                 <a href="#" class="btn btn-default">Purchase</a>
