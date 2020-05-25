@@ -539,7 +539,7 @@
                                             <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul class="popular-items-detail-v1">
                                                 <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=6 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=6 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
