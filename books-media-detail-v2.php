@@ -551,7 +551,14 @@ Email  : manirujjamanakash@gmail.com
             </div>
         </div>
         <!-- End: Products Section -->
-          <?php
+          
+        <div class="booksmedia-fullwidth">
+            <div class="container">
+                <h2 class="section-title text-center">Popular Items</h2>
+                    <span class="underline center"></span>
+                    <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="popular-items-detail-v2">
+                         <?php
                                 
                                     // $query = "SELECT * FROM libri_mario ORDER BY id() LIMIT 6";
                                     $query = "SELECT * FROM libri_mario ORDER BY id LIMIT 6";
@@ -560,20 +567,13 @@ Email  : manirujjamanakash@gmail.com
 
                                 while ($row = $stmt->fetch()) {
                             ?> 
-        <div class="booksmedia-fullwidth">
-            <div class="container">
-                <h2 class="section-title text-center">Popular Items</h2>
-                    <span class="underline center"></span>
-                    <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul class="popular-items-detail-v2">
-                         
                             <li>
                                 <div class="book-list-icon blue-icon"></div>
                                 <figure>
                                     <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                     <figcaption>
                                         <header>
-                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=1>
+                                            <h4><a href="http://dsglab.netsons.org/books-media-detail-v2.php?id=<?php echo $row['ID'];?>"><?php echo $row['Titolo'];?></a></h4><href=h>
                                             <p><strong>Author:</strong>  <?php echo $row['Autore'];?></p>
                                             <p><strong>ISBN:</strong>  <?php echo $row['ISBN'];?></p>
                                         </header>
@@ -614,250 +614,17 @@ Email  : manirujjamanakash@gmail.com
                                     </figcaption>
                                 </figure>                                                
                             </li>
-                           
-                            <li>
-                                <div class="book-list-icon yellow-icon"></div>
-                                <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
-                                    <figcaption>
-                                        <header>
-                                            <h4><a href="#."><?php echo $row["Titolo"];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=2>
-                                            <p><strong>Author:</strong> <?php echo $row['Autore'];?></p>
-                                            <p><strong>ISBN:</strong>  <?php echo $row['ISBN'];?></p>
-                                        </header>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
-                                        <div class="actions">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Add To Cart">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Like">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Mail"><i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-print"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-share-alt"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>
-                                </figure>                                                
-                            </li>
-                            <li>
-                                <div class="book-list-icon green-icon"></div>
-                                <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
-                                    <figcaption>
-                                        <header>
-                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=3>
-                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
-                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
-                                        </header>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
-                                        <div class="actions">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Add To Cart">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Like">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Mail"><i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-print"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-share-alt"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>
-                                </figure>                                                
-                            </li>
-                            <li>
-                                <div class="book-list-icon blue-icon"></div>
-                                <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
-                                    <figcaption>
-                                        <header>
-                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=4>
-                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
-                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
-                                        </header>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
-                                        <div class="actions">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Add To Cart">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Like">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Mail"><i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-print"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-share-alt"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>
-                                </figure>                                                
-                            </li>
-                            <li>
-                                <div class="book-list-icon yellow-icon"></div>
-                                <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
-                                    <figcaption>
-                                        <header>
-                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=5>
-                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
-                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
-                                        </header>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
-                                        <div class="actions">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Add To Cart">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Like">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Mail"><i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-print"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-share-alt"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>
-                                </figure>                                                
-                            </li>
-                            <li>
-                                <div class="book-list-icon green-icon"></div>
-                                <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
-                                    <figcaption>
-                                        <header>
-                                            <h4><a href="#."><?php echo $row['Titolo'];?></a></h4><href=http://dsglab.netsons.org/books-media-detail-v2.php?id=6>
-                                            <p><strong>Author:</strong><?php echo $row['Autore'];?></p>
-                                            <p><strong>ISBN:</strong><?php echo $row['ISBN'];?></p>
-                                        </header>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
-                                        <div class="actions">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Add To Cart">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Like">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Mail"><i class="fa fa-envelope"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-print"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="Print">
-                                                        <i class="fa fa-share-alt"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>
-                                </figure>                                                
-                            </li>
+                          
+                            <?php
+                                
+                            }
+                                
+                            ?>
+                          
                         </ul>
             </div>
         </div>
-       <?php
        
-                                }
-       
-       ?>
         <!-- Start: Social Network -->
         <section class="social-network section-padding">
             <div class="container">
