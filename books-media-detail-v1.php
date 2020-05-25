@@ -539,7 +539,7 @@
                                             <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul class="popular-items-detail-v1">
                                                 <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=6 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola ORDER BY num_lettori DESC LIMIT 6 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
@@ -590,14 +590,7 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
-                                                <?php
-                            }
-                                ?>
-                                                <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=3 '); 
-                            while ($row = $stmt->fetch())
-                            {
-                                ?>
+                                                
                                                 <li>
                                                     <div class="book-list-icon yellow-icon"></div>
                                                     <figure>
@@ -645,14 +638,7 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
-                                                <?php
-                            }
-                                ?>
-                                     <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=1 '); 
-                            while ($row = $stmt->fetch())
-                           {
-                                ?>           
+                                                   
                                                 <li>
                                                     <div class="book-list-icon green-icon"></div>
                                                     <figure>
@@ -700,15 +686,7 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
-                                                <?php
-                            }
-                                ?>
-                                     <?php
-                                    
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=2 '); 
-                            while ($row = $stmt->fetch())
-                            {
-                                ?>
+                                                
                                                 <li>
                                                     <div class="book-list-icon blue-icon"></div>
                                                     <figure>
@@ -756,15 +734,8 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
-                                                <?php
-                            }
-                                ?>
-                                                <?php
-                                    
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=4 '); 
-                            while ($row = $stmt->fetch())
-                            {
-                                ?>
+                                                
+                                
                                                 <li>
                                                     <div class="book-list-icon yellow-icon"></div>
                                                     <figure>
@@ -812,15 +783,7 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
-                                                 <?php
-                            }
-                                ?>
-                                                <?php
-                                    
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=5 '); 
-                            while ($row = $stmt->fetch())
-                            {
-                                ?>
+                                                 
                                                 <li>
                                                     <div class="book-list-icon green-icon"></div>
                                                     <figure>
