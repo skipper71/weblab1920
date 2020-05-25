@@ -853,7 +853,11 @@ Email  : manirujjamanakash@gmail.com
                         </ul>
             </div>
         </div>
-       <?php?>
+       <?php
+       
+                                }
+       
+       ?>
         <!-- Start: Social Network -->
         <section class="social-network section-padding">
             <div class="container">
