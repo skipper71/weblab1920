@@ -553,8 +553,8 @@ Email  : manirujjamanakash@gmail.com
         <!-- End: Products Section -->
           <?php
                                 
-                                    // $query = "SELECT * FROM libri_mario ORDER BY id() LIMIT 1";
-                                    $query = "SELECT * FROM libri_mario ORDER BY id LIMIT 1";
+                                    // $query = "SELECT * FROM libri_mario ORDER BY id() LIMIT 6";
+                                    $query = "SELECT * FROM libri_mario ORDER BY id LIMIT 6";
                                
                                 $stmt = $pdo->query($query);
 
@@ -853,7 +853,11 @@ Email  : manirujjamanakash@gmail.com
                         </ul>
             </div>
         </div>
-       <?php?>
+       <?php
+       
+                                }
+       
+       ?>
         <!-- Start: Social Network -->
         <section class="social-network section-padding">
             <div class="container">
