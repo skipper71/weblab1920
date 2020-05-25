@@ -538,15 +538,20 @@
                                             <span class="underline center"></span>
                                             <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul class="popular-items-detail-v1">
+                                                <?php
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=6 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                                 <li>
                                                     <div class="book-list-icon blue-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=6"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong> <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -585,15 +590,23 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                <?php
+                            }
+                                ?>
+                                                <?php
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=3 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                                 <li>
                                                     <div class="book-list-icon yellow-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=3"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong>  <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -632,15 +645,23 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                <?php
+                            }
+                                ?>
+                                     <?php
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=1 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>           
                                                 <li>
                                                     <div class="book-list-icon green-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=1"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong>  <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -679,15 +700,24 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                <?php
+                            }
+                                ?>
+                                     <?php
+                                    
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=2 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                                 <li>
                                                     <div class="book-list-icon blue-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=2"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong>  <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -726,15 +756,24 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                <?php
+                            }
+                                ?>
+                                                <?php
+                                    
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=4 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                                 <li>
                                                     <div class="book-list-icon yellow-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=4"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong>  <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -773,15 +812,24 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                 <?php
+                            }
+                                ?>
+                                                <?php
+                                    
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=5 '); 
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                                 <li>
                                                     <div class="book-list-icon green-icon"></div>
                                                     <figure>
                                                         <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                                         <figcaption>
                                                             <header>
-                                                                <h4><a href="#.">The Great Gatsby</a></h4>
-                                                                <p><strong>Author:</strong>  F. Scott Fitzgerald</p>
-                                                                <p><strong>ISBN:</strong>  9781581573268</p>
+                                                                <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=5"><?php echo($row["titolo"]);?></a></h4>
+                                                                <p><strong>Author:</strong>  <?php echo($row["autore"]);?></p>
+                                                                <p><strong>ISBN:</strong>  <?php echo($row["isbn"]);?></p>
                                                             </header>
                                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Pellentesque dolor turpis, pulvinar varius.</p>
                                                             <div class="actions">
@@ -820,6 +868,9 @@
                                                         </figcaption>
                                                     </figure>                                                
                                                 </li>
+                                                <?php
+                            }
+                                ?>
                                             </ul>
                                         </div>
                                     </div>
