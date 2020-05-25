@@ -594,7 +594,7 @@
                             }
                                 ?>
                                                 <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=3 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=3 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
@@ -649,9 +649,9 @@
                             }
                                 ?>
                                      <?php
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=1 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=1 '); 
                             while ($row = $stmt->fetch())
-                            {
+                           {
                                 ?>           
                                                 <li>
                                                     <div class="book-list-icon green-icon"></div>
@@ -705,7 +705,7 @@
                                 ?>
                                      <?php
                                     
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=2 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=2 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
@@ -761,7 +761,7 @@
                                 ?>
                                                 <?php
                                     
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=4 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=4 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
@@ -817,7 +817,7 @@
                                 ?>
                                                 <?php
                                     
-                            $stmt = $pdo->query('SELECT * FROM libri_fabiola' 'WHERE id=5 '); 
+                            $stmt = $pdo->query('SELECT * FROM libri_fabiola WHERE id=5 '); 
                             while ($row = $stmt->fetch())
                             {
                                 ?>
