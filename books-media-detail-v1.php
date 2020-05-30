@@ -319,10 +319,27 @@
                             <div class="row">
                                 <div class="col-md-9 col-md-push-3">
                                     <div class="booksmedia-detail-box">
+                                        <?php
+                            //$stmt = $pdo->query("SELECT * FROM libri_fabiola WHERE ISBN='".$isbn."'");
+                            $query = "";
+                            if (isset($id)){
+                                $query = "SELECT * FROM libri_fabiola WHERE id=".$id."";
+                            } else {
+                                // $query = "SELECT * FROM libri_fabiola ORDER BY rand() LIMIT 1";
+                                $query = "SELECT * FROM libri_fabiola ORDER BY num_lettori DESC LIMIT 1";
+                            }
+                            $stmt = $pdo->query($query);
+                            
+                            // SELECT * FROM libri_fabiola WHERE ISBN='88-04-53776-0'
+                                    
+                            while ($row = $stmt->fetch())
+                            {
+                                ?>
                                         <div class="single-book-box">                                                
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon yellow-icon"></div>
-                                                <img alt="Book" src="images/books-media/list-view/book-media-01.jpg" />                                                    
+                                                <img alt="Book" src="copertine/fabiola/<?php echo($row["copertina"]);?>" alt="Book Image">                                                    
+                                                                                                    
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -362,22 +379,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <?php
-                            //$stmt = $pdo->query("SELECT * FROM libri_fabiola WHERE ISBN='".$isbn."'");
-                            $query = "";
-                            if (isset($id)){
-                                $query = "SELECT * FROM libri_fabiola WHERE id=".$id."";
-                            } else {
-                                // $query = "SELECT * FROM libri_fabiola ORDER BY rand() LIMIT 1";
-                                $query = "SELECT * FROM libri_fabiola ORDER BY num_lettori DESC LIMIT 1";
-                            }
-                            $stmt = $pdo->query($query);
-                            
-                            // SELECT * FROM libri_fabiola WHERE ISBN='88-04-53776-0'
-                                    
-                            while ($row = $stmt->fetch())
-                            {
-                                ?>
+                                                
                                                 <header class="entry-header">
                                                     <h2 class="entry-title"><?php echo($row["titolo"]);?></h2>
                                                     <ul>
@@ -397,9 +399,7 @@
                                                         <li><strong>Publisher:</strong><?php echo($row["editore"]);?></li>
                                                     </ul>
                                                 </header>
-                                                <?php
-                            }
-                                ?>
+                                              
                                                 <div class="entry-content post-buttons">
                                                     <a href="#." class="btn btn-dark-gray">Place a Hold</a>
                                                     <a href=""#." class="style:display:none"btn btn-dark-gray"></a>
@@ -407,6 +407,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php
+                            }
+                                ?>
                                         <div class="row">
         	    <div class="col-md-2">
         	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
@@ -546,7 +549,7 @@
                                                 <li>
                                                     <div class="book-list-icon blue-icon"></div>
                                                     <figure>
-                                                        <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
+                                                        <img src="copertine/fabiola/<?php echo($row["copertina"]);?>" alt="Book">
                                                         <figcaption>
                                                             <header>
                                                                 <h4><a href="http://dsglab.netsons.org/books-media-detail-v1.php?id=<?php echo($row["id"]);?>"><?php echo($row["titolo"]);?></a></h4>
