@@ -339,6 +339,7 @@
                                                         <figcaption>
                                                             <p><strong><?php echo($row['titolo'])?></strong></p>
                                                             <p><strong>Author:</strong> <?php echo($row['autore'])?></p>
+                                                            <p><strong><?php echo($row['copertina'])?></trong></p>
                                                         </figcaption>
                                                     </figure> 
                                                     <div class="book-list-icon blue-icon"></div>
