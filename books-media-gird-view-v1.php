@@ -335,7 +335,7 @@
                                                 <li>
                                                     <figure>
                                                         <!--<img src="images/books-media/gird-view/book-media-grid-01.jpg" alt="Book">-->
-                                                        <img src="copertine/matteo/default.jpg" alt="Book">
+                                                        <img src="copertine/matteo/<?php echo($row['copertina'])?>" alt="Book">
                                                         <figcaption>
                                                             <p><strong><?php echo($row['titolo'])?></strong></p>
                                                             <p><strong>Author:</strong> <?php echo($row['autore'])?></p>
