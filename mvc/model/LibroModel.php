@@ -23,6 +23,7 @@ function getLibroById($id){
         $return["author"]   = $result["Autore"];       
         $return["editor"]   = $result["Editore"];       
         $return["pubdate"]  = $result["DataPubblicazione"];                
+        $return["resume"]   = $result["Riassunto"];                
     }
     
     return $return;
@@ -49,6 +50,7 @@ function getLibroByRandom(){
         $return["author"]   = $result["Autore"];       
         $return["editor"]   = $result["Editore"];       
         $return["pubdate"]  = $result["DataPubblicazione"];                
+        $return["resume"]   = $result["Riassunto"];                
     }
     
     return $return;
